@@ -29,11 +29,11 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-.content__head {
+.head {
   display: block;
   justify-content: space-between;
 }
-.content__user-nav {
+.head__user-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +51,7 @@ html {
   align-items: center;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .user-menu__call {
   text-decoration: none;
@@ -164,7 +165,7 @@ html {
 #last .site-nav__link {
   padding-right: 0;
 }
-.site-nav__list {
+.site-nav__item {
   list-style-type: none;
 }
 .site-nav__link {
@@ -250,7 +251,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-.about__setting::before {
+.about__item--setting::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -261,7 +262,7 @@ html {
   background-size: contain;
 }
 
-.about__money-back::before {
+.about__item--money-back::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -272,7 +273,7 @@ html {
   background-size: contain;
 }
 
-.about__shipping::before {
+.about__item--shipping::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -283,7 +284,7 @@ html {
   background-size: contain;
 }
 
-.about__shipping-two::before {
+.about__item--shipping-two::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -298,14 +299,14 @@ html {
   margin: 0;
   padding: 0;
   width: 1110px;
-  margin-top: 100px;
-  margin-bottom: 80px;
   justify-content: space-between;
 }
 
-.about__list li {
+.about__item {
   margin: 0;
   padding: 0;
+  padding-top: 100px;
+  padding-bottom: 80px;
   list-style-type: none;
   width: 255px;
   font-family: var(--other-font);
@@ -338,7 +339,7 @@ html {
   margin-right: auto;
   width: 1110px;
 }
-.content__header {
+.site__header {
   margin: 0;
   width: 1110px;
   margin-left: auto;
@@ -350,7 +351,7 @@ html {
   font-size: 48px;
   color: var(--h2-color);
 }
-.content__header::after {
+.site__header::after {
   display: block;
   height: 15px;
   width: 165px;
@@ -373,56 +374,35 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
-.card__icon-like {
+.card__icon {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  border: 1px solid #ffffff;
+  transition: background-color 250ms var(--timing-fn);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card__icon--like {
   background-image: url(../images/icon/gallery-icon-1.svg);
   width: 50px;
   height: 50px;
-  background-size: 65%;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 250ms var(--timing-fn);
 }
-.card .card__icon-share {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+.card__icon--share {
   background-image: url(../images/icon/gallery-icon-2.svg);
   width: 50px;
   height: 50px;
-  background-size: 65%;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 250ms var(--timing-fn);
 }
-.card .card__icon-clock {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+.card__icon--clock {
   background-image: url(../images/icon/gallery-icon-3.svg);
   width: 50px;
   height: 50px;
-  background-size: 65%;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 250ms var(--timing-fn);
 }
-.card .card__icon-cart {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+.card__icon--cart {
   background-image: url(../images/icon/gallery-icon-4.png);
   width: 164px;
   height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 250ms var(--timing-fn);
 }
 .card__list {
   list-style-type: none;
@@ -528,23 +508,23 @@ html {
   transform: translateY(110%);
   transition: transform 250ms var(--timing-fn);
 }
-.card__icon-like:hover,
-.card__icon-like:focus {
+.card__icon--like:hover,
+.card__icon--like:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
-.card__icon-share:hover,
-.card__icon-share:focus {
+.card__icon--share:hover,
+.card__icon--share:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
-.card__icon-clock:hover,
-.card__icon-clock:focus {
+.card__icon--clock:hover,
+.card__icon--clock:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
-.card__icon-cart:hover,
-.card__icon-cart:focus {
+.card__icon--cart:hover,
+.card__icon--cart:focus {
   background-color: var(--dark-gray);
   cursor: pointer;
 }
